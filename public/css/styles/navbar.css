@@ -1,0 +1,110 @@
+@import url('https://fonts.cdnfonts.com/css/lato');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+@import url('https://fonts.cdnfonts.com/css/work-sans');
+@import url('https://fonts.cdnfonts.com/css/inter');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+}
+
+.navbar {
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 12px 40px;
+    background-color: white;
+    box-shadow: 0px 1.4px 1.4px rgba(0, 0, 0, 0.25);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    flex-wrap: wrap;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.left-section .nav--image {
+    width: 40px;
+    height: 40px;
+    padding: 3px;
+}
+
+.left-section h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0F6DA1;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.right-section a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    color: black;
+    transition: color 0.3s;
+}
+
+.right-section a:hover,
+.right-section a:focus {
+    color: #0368FF;
+}
+
+.right-section .active {
+    color: #0368FF;
+}
+
+.right-section button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 0px 15px 15px 15px;
+    background-color: #0F6DA1;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.right-section button:hover {
+    background-color: #09527e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 12px 20px;
+    }
+
+    .right-section {
+        justify-content: center;
+        gap: 16px;
+        padding-top: 10px;
+    }
+
+    .left-section {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+}

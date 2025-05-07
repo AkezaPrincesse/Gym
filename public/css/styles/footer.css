@@ -1,0 +1,79 @@
+/* Footer Columns Layout */
+.footer {
+    background: #2c3e50;
+    color: white;
+    padding: 2rem 5%;
+    font-family: 'Poppins', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+  
+  .footer-column {
+    margin-bottom: 1.5rem;
+  }
+  
+  .footer-column h3 {
+    color: #4C81E8;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #4C81E8;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-column li {
+    margin-bottom: 0.8rem;
+  }
+  
+  .footer-column a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: block;
+  }
+  
+  .footer-column a:hover {
+    color: white;
+  }
+  
+  /* Specific column adjustments */
+  .faq-column {
+    grid-column: span 2; /* FAQs take more space */
+  }
+  
+  .copyright {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 2rem;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .footer {
+      grid-template-columns: 1fr 1fr;
+    }
+    
+    .faq-column {
+      grid-column: span 2;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer {
+      grid-template-columns: 1fr;
+    }
+    
+    .faq-column {
+      grid-column: span 1;
+    }
+  }
